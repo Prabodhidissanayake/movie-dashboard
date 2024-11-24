@@ -5,17 +5,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-dark-gray: #54494B;
+  --color-medium-gray: #7E8287;
+  --color-light-gray: #9DA39A;
+  --color-muted-pink: #B98389;
+  --color-bright-pink: #DB2955;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --color-dark-gray: #54494B;
+    --color-medium-gray: #7E8287;
+    --color-light-gray: #9DA39A;
+    --color-muted-pink: #B98389;
+    --color-bright-pink: #DB2955;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}

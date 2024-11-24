@@ -1,6 +1,6 @@
 "use client";
 
-import { SquareMenu } from "lucide-react";
+import { Film, FolderHeart, House, Settings, SquareMenu, SquareX } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -13,7 +13,6 @@ export default function Sidebar() {
 
     return (
         <>
-            {/* Hamburger Button */}
             {!isOpen && (
                 <button
                     onClick={toggleSidebar}
@@ -24,31 +23,31 @@ export default function Sidebar() {
                 </button>
             )}
 
-            {/* Sidebar */}
+
             <aside
-                className={`fixed top-0 left-0 h-screen bg-gray-800 text-white p-4 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 left-0 h-screen bg-mutedPink text-darkBlue p-4 transform ${isOpen ? "translate-x-0" : "-translate-x-full"
                     } transition-transform duration-300 md:translate-x-0 md:static md:flex md:flex-col w-64`}
             >
-                <button
+                {isOpen && (<button
                     onClick={toggleSidebar}
-                    className="p-2 bg-gray-800 text-white fixed top-4 right-4 z-50 md:hidden"
+                    className="p-2 bg-mutedPink text-darkBlue fixed top-4 right-4 z-50 md:hidden"
                     aria-label="Close sidebar"
                 >
-                    ✕
-                </button>
+                    <SquareX />
+                </button>)}
 
                 <nav className="flex flex-col gap-4 mt-16">
-                    <Link href="/" className="text-lg font-semibold hover:underline">
-                        Home
+                    <Link href="/" className="text-lg font-semibold hover:underline flex gap-2 items-center">
+                        <House />  Home
                     </Link>
-                    <Link href="/movies" className="text-lg font-semibold hover:underline">
-                        Movies
+                    <Link href="/movies" className="text-lg font-semibold hover:underline flex gap-2 items-center">
+                        <Film /> Movies
                     </Link>
-                    <Link href="/favorites" className="text-lg font-semibold hover:underline">
-                        Favorites
+                    <Link href="/favorites" className="text-lg font-semibold hover:underline flex gap-2 items-center">
+                        <FolderHeart />   Favorites
                     </Link>
-                    <Link href="/settings" className="text-lg font-semibold hover:underline">
-                        Settings
+                    <Link href="/settings" className="text-lg font-semibold hover:underline flex gap-2 items-center">
+                        <Settings />   Settings
                     </Link>
                 </nav>
             </aside>
