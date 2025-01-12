@@ -15,7 +15,8 @@ export default function SettingsPage() {
   const handleSave = async () => {
     setIsSaving(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // Simulating a save operation
+      await new Promise((resolve) => setTimeout(resolve, 200));
       setLanguage(selectedLanguage);
     } finally {
       setIsSaving(false);
