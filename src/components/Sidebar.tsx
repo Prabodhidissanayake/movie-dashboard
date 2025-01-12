@@ -1,6 +1,6 @@
 "use client";
 
-import { Film, FolderHeart, House, Settings, SquareMenu, SquareX } from "lucide-react";
+import { Film, FolderHeart, Hourglass, House, Settings, SquareMenu, SquareX } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -45,6 +45,9 @@ export default function Sidebar() {
                     </Link>
                     <Link href="/favorites" className="text-lg font-semibold hover:underline flex gap-2 items-center">
                         <FolderHeart />   Favorites
+                    </Link>
+                    <Link href="/upcoming" className="text-lg font-semibold hover:underline flex gap-2 items-center">
+                        <Hourglass />   Upcoming
                     </Link>
                     <Link href="/settings" className="text-lg font-semibold hover:underline flex gap-2 items-center">
                         <Settings />   Settings
