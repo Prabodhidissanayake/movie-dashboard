@@ -1,11 +1,10 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-
-type Language = 'en-US' | 'es-ES' | 'fr-FR'
+import { SupportedLanguage } from '../utils/languages'
 
 interface LanguageState {
-  language: Language
-  setLanguage: (language: Language) => void
+  language: SupportedLanguage
+  setLanguage: (language: SupportedLanguage) => void
 }
 
 export const useLanguageStore = create<LanguageState>()(
