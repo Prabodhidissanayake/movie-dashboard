@@ -25,7 +25,7 @@ export default function SettingsPage() {
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6">Settings</h1>
+      <h1 className="text-2xl font-bold mb-6 text-blue-600">Settings</h1>
 
       <section className="max-w-md">
         <h2 className="text-xl font-semibold mb-4">Language Preferences</h2>
